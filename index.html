@@ -137,10 +137,15 @@
         <div class="column">
           <div style="text-align: center;"> 
             <img src="static/images/fig2.jpg" alt="Overall Pipeline" width="1500" height="auto"/>
+            <p>
+              Overall flow of FIZZ.
+              The pipeline begins by applying coreference resolution to both the summary and the document.
+              Atomic facts are then decomposed from the summary using an LLM.
+              These atomic facts are filtered and subsequently scored against the document.
+              The scores are refined through granularity expansion.
+              The ultimate score is defined by choosing the minimum score.
+            </p>
           </div>
-          <p>
-            Hi
-          </p>
         </div>
       </div>
     </div>
@@ -148,12 +153,76 @@
 </section>
 <!-- End Pipeline -->
 
+<!-- Coreference Resolution -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper Image. -->
+      <h2 class="title is-3">Coreference Resolution</h2>
+      <div class="columns">
+        <div class="column">
+          <div style="text-align: center;">
+            <img src="static/images/Table6.png" alt="Effect of Coreference Resolution" width="auto" height="auto"/>
+            <p>
+              Effect of coreference resolution of document and atomic facts on AggreFact-FtSota splits before the process of granularity expansion.
+            </p>
+          </div>
+          <p>
+            To enhance the entailment recognition capabilities of NLI models, FIZZ first conducts centered around coreference resolution in both document and summary texts.
+            The motivation behind this approach is driven by the inherent limitations observed in NLI models when processing texts with pronouns.
+            Specifically, we find that NLI models tend to struggle with recognizing entailment when presented with premises and hypotheses that contain the same content but differ in their use of pronouns and explicit entity names.
+            To address this challenge, FIZZ employs pronoun resolution in summaries by analyzing them on a sentence-bysentence basis to extract atomic facts.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Coreference Resolution -->
+
+<!-- Atomic Facts Decomposition -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper Image. -->
+      <h2 class="title is-3">Atomic Facts Decomposition</h2>
+      <div class="columns">
+        <div class="column">
+          <div style="text-align: center;">
+            <p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Atomic Facts Decomposition -->
+
+<!-- Atomic Facts Scoring -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper Image. -->
+      <h2 class="title is-3">Atomic Facts Scoring</h2>
+      <div class="columns">
+        <div class="column">
+          <div style="text-align: center;">
+            <p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Atomic Facts Scoring -->
+
 <!-- Experimental Results -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Experimental Results</h2>
-      
       <!-- Other two items in two columns -->
       <div class="columns">
         <div class="column is-half">
